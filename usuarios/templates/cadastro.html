@@ -18,6 +18,14 @@
                     </div>
 
                     <div class="body-form">
+                        {% if messages %}
+                            <br>
+                            {% for message in messages %}
+                                <div class="alert {{message.tags}}">
+                                    {{message}}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
                         <h2>Cadastre-se</h2>
                         <p>Seu cadastro salva vidas.</p>
                         <hr>
